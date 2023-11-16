@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import styles from './page.module.css'
 
 export default function Home() {
     const [dadosApi, setDadosApi] = useState('');
@@ -23,19 +24,19 @@ export default function Home() {
   console.log(dadosApi);
 
   return (
-    <div>
+    <div className={styles.bckg}>
         <h1>Animals</h1>
-        <ul>
+        <ul className={styles.dualdiv}>
             {
             dadosApi?(
             dadosApi.data.map((animal) => (
-            <div key={animal.id}>
-                <h2>Nome: {animal.name}</h2>
-                <p>Idade: {animal.age}</p>
-                <p>Tipo: {animal.type}</p>
-                <p>Cor: {animal.color}</p>
-                <p>Vacinado?: {animal.statusVaccine}</p>
-                <img src={animal.image} alt={animal.name} />
+            <div key={animal.id} className={styles.redcard}>
+                <h2 className={styles.nomalCentralizedText}>Nome: {animal.name}</h2>
+                <p className={styles.whitetext}>Idade: {animal.age}</p>
+                <p className={styles.whitetext}>Tipo: {animal.type}</p>
+                <p className={styles.whitetext}>Cor: {animal.color}</p>
+                <p className={styles.whitetext}>Vacinado ?: {animal.statusVaccine}</p>
+                <img src={animal.image} alt={animal.name} className={styles.image}/>
                 
             </div>
             ))
