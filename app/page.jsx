@@ -35,7 +35,7 @@ export default function Home() {
                 <p className={styles.whitetext}>Idade: {animal.age}</p>
                 <p className={styles.whitetext}>Tipo: {animal.type}</p>
                 <p className={styles.whitetext}>Cor: {animal.color}</p>
-                <p className={styles.whitetext}>Vacinado ?: {animal.statusVaccine}</p>
+                <p className={styles.whitetext}>Vacinado ?: {animal.status}</p>
                 <img src={animal.image} alt={animal.name} className={styles.image}/>
                 
             </div>
